@@ -47,19 +47,19 @@ The API will run at:
 
 
 ### Entities: 
-**User: Represents a user in the system.**
+### User: Represents a user in the system.
 * id (UUID, auto-generated) 
 * name (string) 
 * email (string, unique) 
 * createdAt (timestamp) 
-**Project: Represents a project.**
+### Project: Represents a project.
 * id (UUID, auto-generated) 
 * name (string) 
 * description (string) 
 * status (enum: PLANNED, ONGOING, COMPLETED) 
 * createdAt (timestamp) 
 * userId (relation to User) 
-**Task: Represents a task under a project.**
+### Task: Represents a task under a project.
 * id (UUID, auto-generated) 
 * title (string) 
 * description (string) 
@@ -70,21 +70,22 @@ The API will run at:
 
 
 ### API Endpoints: 
-**User Endpoints:**
+### User Endpoints:
 * POST /users: Create a user. 
 * GET /users: List all users. 
 * PUT /users/:id: Update a user. 
-* DELETE /users/:id: Delete a user. 
-**Project Endpoints:** 
+* DELETE /users/:id: Delete a user
+### Project Endpoints:
 * POST /projects: Create a project. 
 * GET /projects: List all projects. 
 * PUT /projects/:id: Update a project. 
 * DELETE /projects/:id: Delete a project. 
-**Task Endpoints:** 
-* POST /projects/:projectId/tasks: Create a task under a project. * GET /projects/:projectId/tasks: List tasks for a project. 
+### Task Endpoints:
+* POST /projects/:projectId/tasks: Create a task under a project.
+* GET /projects/:projectId/tasks: List tasks for a project. 
 * PUT /tasks/:id: Update task details or status. 
 * DELETE /tasks/:id: Delete a task. 
-**Filter Endpoints:**
+### Filter Endpoints:
 * GET /tasks?status=IN_PROGRESS&assignedUserId=uuid
 
 ### Screenrecording for testing process of endpoints
